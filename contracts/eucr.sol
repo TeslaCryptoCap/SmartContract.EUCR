@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity  ^0.8.0;
 
-import "@openzeppelin/contracts@4.2.0/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts@4.2.0/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts@4.2.0/token/ERC20/extensions/ERC20Snapshot.sol";
-import "@openzeppelin/contracts@4.2.0/access/AccessControl.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
+import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract DinarStableCoin is ERC20, ERC20Burnable, ERC20Snapshot, AccessControl {
     bytes32 public constant SNAPSHOT_ROLE = keccak256("SNAPSHOT_ROLE");
