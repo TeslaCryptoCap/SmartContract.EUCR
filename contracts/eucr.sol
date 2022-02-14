@@ -18,12 +18,12 @@ contract DinarStableCoin is ERC20, ERC20Burnable, ERC20Snapshot, AccessControl {
     }
 
     function snapshot() public {
-        require(hasRole(SNAPSHOT_ROLE, msg.sender));
+        require(hasRole(SNAPSHOT_ROLE, msg.sender), "The sender must be defined as a SNAPSHOT_ROLE in the deployed contract");
         _snapshot();
     }
 
     function mint(address to, uint256 amount) public {
-        require(hasRole(MINTER_ROLE, msg.sender));
+        require(hasRole(MINTER_ROLE, msg.sender), "The sender must be defined as a MINTER_ROLE in the deployed contract");
         _mint(to, amount);
     }
 
